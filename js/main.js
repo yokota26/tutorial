@@ -25,13 +25,16 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 // Where? > <body>
 document.body.appendChild(renderer.domElement);
 
+// texuture
+let texture = new THREE.TextureLoader().load("tutorial/textures/earth.jpg");
+
 // geometry
 let ballGeometry = new THREE.SphereGeometry(100, 64, 32) //(半径 + widesegment(polligonの数) + heightsegment)
 
 // material
 let ballMaterial = new THREE.MeshPhysicalMaterial({
   // color: 
-  // map: テクスチャ
+  map: texture
 });
 
 // geometry + material = mesh
